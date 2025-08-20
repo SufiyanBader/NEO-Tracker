@@ -375,7 +375,7 @@ const SearchPage = ({ setAsteroids, setLoading, setError, setPage, loading, erro
     setLoading(true);
     setError(null);
 
-    const apiKey = "6jBXJUDiRMarz9MK5wJqE30stdduX6FcgMYGfrn4";
+    const apiKey = import.meta.env.VITE_NASA_API_KEY;
     const apiUrl = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${apiKey}`;
 
     try {
