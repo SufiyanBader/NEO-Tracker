@@ -1,118 +1,121 @@
-# 🚀 NEO Tracker - NASA Asteroids Dashboard
+# NEO Tracker
 
-[![React](https://img.shields.io/badge/React-18.2-blue?logo=react)](https://react.dev/)
-[![Tailwind](https://img.shields.io/badge/Tailwind-3.3-purple?logo=tailwind-css)](https://tailwindcss.com/)
-[![NASA API](https://img.shields.io/badge/NASA_API-NeoWs-green)](https://api.nasa.gov/)
+<img width="1900" height="621" alt="Screenshot 2025-08-20 172317" src="https://github.com/user-attachments/assets/50a584bb-446e-4ba2-8f51-23ca57783828" />
 
-<details>
-<summary>📌 Table of Contents</summary>
-
-1. [Features](#-features)
-2. [Screenshots](#-screenshots) 
-3. [Installation](#-installation)
-4. [Configuration](#%EF%B8%8F-configuration)
-5. [Run Locally](#-run-locally)
-6. [Tech Stack](#-tech-stack)
-7. [FAQ](#-faq)
-</details>
-
-## 🌟 Features
-- Real-time asteroid tracking
-- Interactive charts (Bar/Area)
-- Hazardous asteroid alerts
-- 7-day search history
-- Responsive design
+---
 
 
-// Example API call
-fetch(`https://api.nasa.gov/neo/rest/v1/feed?api_key=${API_KEY}`)
-  .then(res => res.json())
-  .then(data => setAsteroids(data));
-🖼️ Screenshots
-Dashboard and	Asteroid Details
-<img width="1884" height="677" alt="image" src="https://github.com/user-attachments/assets/cd6757cf-9fca-4738-b994-a47c5cee80e5" />
+
+
+
+<img width="1889" height="535" alt="Screenshot 2025-08-20 172639" src="https://github.com/user-attachments/assets/f0c4cd39-decb-4658-b28b-41d4220e8783" />
+
+---
+
+
 
 
 <img width="1901" height="752" alt="image" src="https://github.com/user-attachments/assets/7cd77787-cd46-447a-87aa-643ae886c1f3" />
 
+---
+
+
+
 
 <img width="1893" height="895" alt="image" src="https://github.com/user-attachments/assets/85d1ce1f-fd30-4033-9561-6b3b37296faa" />
+
+---
+
+
 
 
 <img width="1895" height="932" alt="image" src="https://github.com/user-attachments/assets/a1c8b2bd-35ba-4d22-b514-999450a9cddf" />
 
+---
 
 
 
-📥 Installation
-bash
-git clone https://github.com/your-repo/neo-tracker.git
-cd neo-tracker
-npm install
-⚙️ Configuration
-Get NASA API key here
 
-Create .env file:
+## 🌌 Project Overview
 
-env
-VITE_NASA_API_KEY=your_api_key_here
-🏃 Run Locally
-bash
-npm run dev
-Then open: http://localhost:5173
+The **NEO Tracker** is a modern web application designed to track and visualize data about Near-Earth Objects (NEOs), such as asteroids and comets. Built as a hands-on project to demonstrate modern web development and DevOps practices, this application provides users with powerful tools to explore celestial data. It's built with a focus on a clean, professional user interface, robust data handling, and is structured for easy deployment.
 
-<details> <summary>🛠 Build Commands</summary>
-Command	Action
-npm run build	Production build
-npm run preview	Test production build
-npm run lint	Run ESLint
-</details>
-🧰 Tech Stack
-Frontend: React + Vite
+---
 
-Styling: Tailwind CSS
+## ✨ Key Features
 
-Charts: Recharts
+* **Dynamic Dashboard**: A real-time dashboard displaying key statistics about NEOs, including the total number of asteroids, potentially hazardous objects, and other critical metrics.
 
-Icons: Lucide React
+* **Search Functionality**: Users can search for asteroids within a specific 7-day date range, retrieving a list of objects that were tracked during that period.
 
-Date Handling: date-fns
+* **Real-Time Data**: A dedicated "Real-Time" tab that fetches and displays the most current asteroid data for the present day.
 
-❓ FAQ
-<details> <summary>Why are my charts not full-width?</summary>
-Add this to your chart container:
+* **Asteroid Lookup**: A lookup feature that allows users to search for a specific asteroid by its unique NASA JPL ID and view its complete details.
 
-jsx
-<div className="w-full h-[400px]">
-  <ResponsiveContainer width="100%" height="100%">
-    {/* Chart components */}
-  </ResponsiveContainer>
-</div>
-</details><details> <summary>How to fix API rate limits?</summary>
-NASA's API has 1000 requests/hour limit. Cache responses using:
+* **Detailed Information**: Clicking on any asteroid provides a comprehensive view of its physical properties, orbital data, and close approach details.
 
-javascript
-const [data, setData] = useState(() => {
-  const cached = localStorage.getItem('asteroidData');
-  return cached ? JSON.parse(cached) : null;
-});
-</details>
-📜 License
-MIT © Shaishta Parween 
+* **Persistent Search History**: The application saves the last five search queries to local storage, allowing for quick and convenient access to previous searches.
 
-text
+* **Professional UI/UX**: The user interface is built with **React** and styled using **Tailwind CSS**, providing a responsive and visually appealing experience across all devices.
 
-**Interactive Features:**
-1. Collapsible sections (click to expand)
-2. Copy-paste ready code blocks
-3. Badges for quick tech overview
-4. Responsive image placeholders
-5. FAQ with solutions to common issues
+---
 
-To use this:
-1. Save as `README.md`
-2. Replace placeholder images with your actual screenshots
-3. Update the NASA API key instructions
-4. Add your license info
+## 🚀 Technology Stack
+
+* **Frontend**: React (with Vite)
+
+* **Styling**: Tailwind CSS, Lucide React (for icons)
+
+* **Data Visualization**: Recharts for charts and graphs
+
+* **API**: NASA's Near-Earth Object Web Service (NeoWs) API
+
+* **State Management**: React Hooks (`useState`, `useEffect`)
+
+---
+
+## 🔧 Getting Started
+
+### Prerequisites
+
+* Node.js (LTS version recommended)
+
+* npm (comes with Node.js)
+
+### Installation
+
+1.  **Clone the repository:**
+
+    ```
+    git clone [https://github.com/](https://github.com/)<YOUR_GITHUB_USERNAME>/nasa-neo-tracker.git
+    cd nasa-neo-tracker
+    ```
+
+2.  **Install project dependencies:**
+
+    ```
+    npm install
+    ```
+
+3.  **Run the development server:**
+
+    ```
+    npm run dev
+    ```
+
+The application will be available at `http://localhost:5173` (or another port if specified by Vite).
+
+---
+
+## 🌍 API Configuration
+
+This project uses the NASA NEO API. The API key is included in the code as a string variable. For a production environment, it is highly recommended to secure this key by using environment variables or a backend proxy service.
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
+
 
 
